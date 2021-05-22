@@ -1,0 +1,84 @@
+.header
+{
+    padding: 1em 0em;
+}
+
+.header .header__content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav 
+{
+    position: relative;
+}
+
+.nav > .nav__button
+{
+    width: 3em;
+    height: 3em;
+
+    position: absolute;
+    right: 0;
+    top: -2em;
+
+    border: 0;
+    background-color: transparent;
+
+    text-indent: -10em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.nav > .nav__button::after
+{
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    content: "\2261";
+    text-indent: 0em;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav > .nav__menu
+{
+    display: none;
+}
+
+.nav .nav__list
+{
+    padding: 0;
+    list-style-image: url("/right-chevron.svg");
+    display: flex;
+}
+
+.nav .nav__list > li + li
+{
+    margin-left: 2em;
+}
+
+.nav .nav__list > li > a
+{
+    color: var(--black);
+    font-size: .8rem;
+}
+
+@media (min-width: 800px) {
+    .nav .nav__list > li > a
+    {
+        font-size: 1rem;
+    }
+
+    .nav > .nav__button
+    {
+        display: none;
+    }
+
+    .nav > .nav__menu
+    {
+        display: block;
+    }
+}

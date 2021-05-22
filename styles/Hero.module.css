@@ -1,0 +1,116 @@
+.slider
+{
+    user-select: none;
+    text-align: center;
+    position: relative;
+}
+
+.slider > .slider__bg
+{
+    width: 100%;
+    border-radius: .5em;
+    box-shadow: 0em 0em .5em .05em var(--medium-gray);
+}
+
+.slider > .slider__content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: .7em;
+    left: 1em;
+    text-align: left;
+    color: var(--white);
+}
+
+.slider > .slider__content > .filling
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slider > .slider__content > .filling > p
+{
+    margin: 0;
+    font-size: .8rem;
+    text-shadow: 0em 0em .1em black;
+    padding: 0;
+}
+
+.slider > .slider__content > .filling > p:nth-of-type(1)
+{
+    font-size: 1.2rem;
+}
+
+.slider > .slider__content > .filling > p:nth-of-type(3)
+{
+    padding: .3em;
+}
+
+.slider > .slider__content > .filling > p + p
+{
+    margin-top: .8em;
+}
+
+.slider > .slider__content > .filling > .link
+{
+    border: .05em solid var(--white);
+    transition: background-color .2s linear;
+}
+
+.slider > .slider__content > .filling > .link:hover
+{
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.slider > .slider__content > .slider__controllers > .active
+{
+    color: var(--more-dangerous);
+}
+
+@media (min-width: 800px) {
+    .slider > .slider__content
+    {
+        top: 2em;
+        left: 2em;
+    }
+
+    .slider > .slider__content > .filling > p
+    {
+        font-size: 1rem;
+    }
+
+    .slider > .slider__content > .filling > p:nth-of-type(1)
+    {
+        font-size: 1.5rem;
+    }
+
+    .slider > .slider__content > .filling > p + p
+    {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1180px) {
+    .slider > .slider__content
+    {
+        top: 4em;
+    }
+
+    .slider > .slider__content > .filling > p
+    {
+        font-size: 1.1rem;
+    }
+
+    .slider > .slider__content > .filling > p:nth-of-type(1)
+    {
+        font-size: 2rem;
+    }
+
+    .slider > .slider__content > .filling > p:nth-of-type(3)
+    {
+        padding: .5em;
+    }
+}
